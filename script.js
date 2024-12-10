@@ -1,8 +1,6 @@
 
 // alert('heyyy')
 
-const { FindOperators } = require("mongodb")
-
 // a='everyone'
 // console.log('hello to',a);
 // alert(a)
@@ -89,3 +87,28 @@ const { FindOperators } = require("mongodb")
 // console.log(a!=b || a==10)
 
 // here we dont use bitwise operator
+
+
+// method1
+
+// function sample(){
+//     let result=document.getElementById("name")
+//     console.log(result.value);
+//     document.getElementById("display").innerHTML=result.value
+  
+// }
+// sample()
+
+// method2
+
+// function sample(){
+//     let result=document.getElementById('name').Value
+//     console.log(result);
+//     let h2=document.getElementById('display')
+//     h2.innerHTML=result
+
+// }
+
+
+// if,else if
+
