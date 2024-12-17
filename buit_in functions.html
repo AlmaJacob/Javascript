@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- <h2 id="time">2:59</h2> -->
+   <img src="pic.jpeg" id="pic" alt="">
+<script>
+  // synchronous
+
+    // console.log('ready to start');
+    // for(i=0;i<=10;i++){
+    //     console.log(i);
+    // }
+    // console.log('its going to the end point')
+
+// asynchrounus 
+
+      // console.log('ready to start');
+      // setTimeout(()=>{
+      //   console.log('processing');
+      // },4000)
+//  console.log('its going to the end point')
+
+let count=10
+let data=setInterval(()=>{
+  document.getElementById('pic').innerHTML=count
+  console.log (count);
+  count --
+  if(count<0){
+    document.getElementById('pic').style.display='none'
+    clearInterval(data)
+
+  }
+},1000);
+
+
+
+// let minute=2
+// let second=59
+// let data=setInterval(()=>{
+//   document.getElementById('time').innerHTML=minute+':'+second
+//   second --
+//   if(second<0){
+//     minute --
+//     second=59
+//     if(minute<0){
+//       clearInterval(data)
+//     }
+
+//   }
+// },100);
+
+
+
+        </script>
+</body>
+</html>
