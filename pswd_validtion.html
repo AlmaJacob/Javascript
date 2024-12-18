@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="" id="form">
+        <input type="password" name="" id="pwd" placeholder="Enter password" required>
+        <ul>
+            <li id="len">Min len 8</li>
+            <li id="cap">Min 1 letter</li>
+            <li id="sm">Min 1 small letter</li>
+            <li id="no">Min 1 number </li>
+            <li id="spl">Min 1 special character</li>
+        </ul>
+        <input type="submit" value="Add">
+    </form>
+    <script>
+        let pswd=document.getElementById("pwd")
+        let cap=document.getElementById("cap")
+        let sm=document.getElementById("sm")
+        let no=document.getElementById("no")
+        let spl=document.getElementById("spl")
+        pswd.addEventListener('input',function(){
+            let password=pswd.value
+            // Ternary Operator 
+            len.style.color=password.length>=8 ? 'green' : 'red'
+            cap.style.color=/[A-Z]/.test(password) ? 'green' : 'red'
+            sm.style.color=/[a-z]/.test(password) ? 'green' : 'red'
+            no.style.color=/\d/.test(password) ? 'green' : 'red'
+            spl.style.color=/[!@#$%^&*]/.test(password) ? 'green' : 'red'
+        })
+        document.getElementById("form").addEventListener("submit",function(event){
+            event.preventDefault()
+            let password=document.getElementById("pwd").value
+            if (password.length>=8 && /[A-Z]/.test(password) && /[a-z]/.test(password) && /\d/.test(password) && /[!@#$%^&*]/.test(password)){
+                alert('VALID')
+            }
+            else{
+                alert('INVALID Following the command')
+            }
+        })
+
+    </script>
+</body>
+</html>
