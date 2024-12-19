@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class School{
+            constructor(){
+                console.log('school class');
+
+            }
+            classroom(){
+                console.log("class rooms");
+            }
+        }
+
+        
+        class std extends School{
+            constructor(name){
+                super()
+                this.name=name
+                console.log('demo data');
+            }
+            display(age){
+                console.log('display',this.name,age);
+
+            }
+
+        }
+        let std1 = new std('devan')
+        std1.display(21)
+        std1.classroom()
+    </script>
+</body>
+</html>
